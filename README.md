@@ -2,7 +2,11 @@
 
 ## Summary
 
-This project analyzes a text file, counts word frequencies, displays the top N most common words, and provides one additional insight from the data. The program reads a plain text file, normalizes and tokenizes it, then outputs the most frequently occurring words along with the average word length across the entire text.
+This project analyzes a text file by processing and evaluating word usage patterns through multiple stages of text analysis. The program reads a plain text file, normalizes and tokenizes the content, counts word frequencies, identifies the top N most common words, and generates additional statistical insight by calculating the average word length across the dataset.
+
+In this assignment, I practiced working with file handling, text normalization, tokenization, dictionaries, sorting algorithms, and data analysis in Python. I implemented a complete text-processing workflow that efficiently transforms raw text into structured analytical results using clean and organized program design.
+
+This project helped me strengthen my understanding of dictionary-based frequency counting, data-processing pipelines, string manipulation, and algorithm efficiency. I also improved my ability to handle edge cases carefully while maintaining professional code readability, modular structure, and maintainable software design principles.
 
 ## Dataset
 
@@ -132,3 +136,20 @@ My approach was simple and step-by-step. First, I loaded the text using `load_te
 The easiest part was counting words — Python's dictionary made the logic straightforward. The hardest part was deciding how to handle edge cases cleanly across every function without letting a failure in one stage crash the whole pipeline. Returning safe empty values (`""`, `[]`, `0.0`) at each step solved this neatly.
 
 In the future, I would improve this project by adding stop-word filtering to surface more meaningful vocabulary beyond common words like "the" and "and", using `re` for more precise tokenization, and adding a bar chart visualization of the top N words.
+
+Approach
+get_neighbors
+I implemented direct adjacency-list lookup to retrieve all connected neighboring areas in constant time.
+I also handled invalid or missing nodes safely by returning an empty list instead of raising an error.
+has_path
+I implemented breadth-first search (BFS) using a queue to efficiently determine whether a valid route exists between two graph areas.
+A visited set was used to prevent revisiting nodes and avoid infinite traversal in cyclic graphs.
+bfs_order
+I used BFS traversal to explore the graph level by level starting from the source area.
+The algorithm guarantees that nodes are visited in breadth-first order while maintaining efficient traversal performance.
+dfs_order
+I implemented iterative depth-first search (DFS) using a stack structure to explore paths deeply before backtracking.
+Reversing neighbor order preserved consistent traversal ordering while avoiding recursive stack overhead.
+count_reachable_areas
+I applied BFS traversal to identify and count all uniquely reachable areas connected to the starting node.
+The visited tracking system ensured that each graph node was processed only once for optimal efficiency.
